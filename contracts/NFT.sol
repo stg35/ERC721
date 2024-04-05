@@ -48,7 +48,7 @@ contract NFT is ERC721, Ownable {
         address _to = msg.sender;
         uint[SET_AMOUNT] memory _tokenIds;
 
-        require(balanceOf(_to) == 0, "You can't mint set (limit exceeded)."); // Check if the wallet already owns tokens
+        require(balanceOf(_to) == 0, "You cannot mint set (limit exceeded)."); // Check if the wallet already owns tokens
         require(msg.value >= PRICE_PER_SET, "Incorrect payment amount"); // Check payment amount
 
         _mintLoop(_to, MAX_MINT_AMOUNT); // Mint the first batch of tokens
