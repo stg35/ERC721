@@ -119,7 +119,7 @@ describe("NFT", () => {
       nft
         .connect(otherAccount)
         .mintSet({ value: hre.ethers.parseEther("0.02") })
-    ).to.be.revertedWith("You can't mint set (limit exceeded).");
+    ).to.be.revertedWith("You cannot mint set (limit exceeded).");
   });
 
   it("should allow withdrawing contract balance by owner", async () => {
